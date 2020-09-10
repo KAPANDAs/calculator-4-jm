@@ -107,7 +107,7 @@
                     number %= 10;
                 }
                 if (number == 9) {
-                    outputString = new StringBuilder("IX");
+                    outputString.append("IX");
                     number -= 9;
                 }
                 if (number >= 5) {
@@ -115,7 +115,7 @@
                     number -= 5;
                 }
                 if (number == 4) {
-                    outputString = new StringBuilder("IV");
+                    outputString.append("IV");
                     number -= 4;
                 }
                 if (number >= 1) {
