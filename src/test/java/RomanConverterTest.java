@@ -14,11 +14,10 @@ public class RomanConverterTest {
 
     @Test
     public void convFromRomanToInt(){
-        assertEquals(RomanConverter.romanToInt("V"), 5);
-        assertEquals(RomanConverter.romanToInt("I"), 1);
-        assertEquals(RomanConverter.romanToInt("XIV"), 14);
-        assertEquals(RomanConverter.romanToInt("LII"), 52);
-        assertEquals(RomanConverter.romanToInt("LXV"), 65);
-
+        assertEquals(5, RomanConverter.romanToInt("V"));
+        assertEquals(4, RomanConverter.romanToInt("IV"));
+        assertEquals(10, RomanConverter.romanToInt("X"));
+        assertEquals(1, RomanConverter.romanToInt("I"));
+        assertEquals(9, RomanConverter.romanToInt("IX"));
     }
 }
