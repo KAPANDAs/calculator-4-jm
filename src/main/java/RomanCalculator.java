@@ -84,10 +84,10 @@
          */
         public static String integerToRoman(int number) {
             StringBuilder outputString = new StringBuilder();
-            while (number >= 0 && number < 101) {
+            while (number > 0 && number < 101) {
                 if (number == 100) {
                     outputString.append("C");
-                    number -= 101;
+                    number -= 100;
                 }
                 if (number >= 90) {
                     outputString.append("XC");
@@ -121,10 +121,10 @@
                 if (number >= 1) {
                     outputString.append("I".repeat(number));
                     number = -1;
-                } else if (number == 0){
-                    outputString = new StringBuilder("0");
-                    break;
                 }
+            }
+            if (number == 0 && outputString.toString().isEmpty()){
+                outputString = new StringBuilder("0");
             }
             return outputString.toString();
         }
