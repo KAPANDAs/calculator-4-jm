@@ -6,30 +6,30 @@ public class ArabianCalculatorTest {
 
     @Test
     public void multiplyTest(){
-        assertEquals(ArabianCalculator.calculate(4, "*", 2),8);
-        assertEquals(ArabianCalculator.calculate(1, "*", 1),1);
-        assertEquals(ArabianCalculator.calculate(6 ,"*", 7),42);
+        assertEquals(8,ArabianCalculator.calculate(4, "*", 2));
+        assertEquals(1,ArabianCalculator.calculate(1, "*", 1));
+        assertEquals(42,ArabianCalculator.calculate(6 ,"*", 7));
     }
 
     @Test
     public void divisionTest(){
-        assertEquals(ArabianCalculator.calculate(4, "/", 2),2);
-        assertEquals(ArabianCalculator.calculate(1, "/", 1),1);
-        assertEquals(ArabianCalculator.calculate(6 ,"/", 7),0);
+        assertEquals(2,ArabianCalculator.calculate(4, "/", 2));
+        assertEquals(1,ArabianCalculator.calculate(1, "/", 1));
+        assertEquals(0,ArabianCalculator.calculate(6 ,"/", 7));
     }
 
     @Test
     public void addingTest(){
-        assertEquals(ArabianCalculator.calculate(4, "+", 2),6);
-        assertEquals(ArabianCalculator.calculate(1, "+", 1),2);
-        assertEquals(ArabianCalculator.calculate(6 ,"+", 7),13);
+        assertEquals(6,ArabianCalculator.calculate(4, "+", 2));
+        assertEquals(2,ArabianCalculator.calculate(1, "+", 1));
+        assertEquals(13,ArabianCalculator.calculate(6 ,"+", 7));
     }
 
     @Test
     public void subtractionTest(){
-        assertEquals(ArabianCalculator.calculate(4, "-", 2),2);
-        assertEquals(ArabianCalculator.calculate(1, "-", 1),0);
-        assertEquals(ArabianCalculator.calculate(6 ,"-", 7),-1);
+        assertEquals(2,ArabianCalculator.calculate(4, "-", 2));
+        assertEquals(0,ArabianCalculator.calculate(1, "-", 1));
+        assertEquals(-1,ArabianCalculator.calculate(6 ,"-", 7));
     }
 
     @Test
