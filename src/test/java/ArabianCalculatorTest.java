@@ -1,5 +1,6 @@
-import static org.junit.Assert.*;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import org.junit.jupiter.api.Test;
 
 public class ArabianCalculatorTest {
 
@@ -31,8 +32,8 @@ public class ArabianCalculatorTest {
         assertEquals(ArabianCalculator.calculate(6 ,"-", 7),-1);
     }
 
-//    @Test(expected = IllegalArgumentException.class)
-//    public void testException() throws IllegalArgumentException{
-//        ArabianCalculator.calculate(0, "/", 2);
-//    }
+    @Test
+    public void testException(){
+        assertThrows(IllegalArgumentException.class, () -> ArabianCalculator.calculate(0, "/s", 2));
+    }
 }
