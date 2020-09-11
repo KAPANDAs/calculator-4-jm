@@ -6,6 +6,8 @@
      * C = 100 - max output
      */
 
+    import java.awt.desktop.PrintFilesEvent;
+
     public class RomanCalculator {
 
         /**
@@ -14,15 +16,14 @@
          * @return String with answer
          */
         public static String calculateRoman(String[] args) {
-            int num = 0;
-
-            try {
-                num = ArabianCalculator.calculate(RomanConverter.romanToInt(args[0]), args[1], RomanConverter.romanToInt(args[2]));
-            } catch (Exception e) {
-                e.printStackTrace();
+            int num = ArabianCalculator.calculate(RomanConverter.romanToInt(args[0]), args[1], RomanConverter.romanToInt(args[2]));
+            if (num > 0) {
+                return RomanConverter.integerToRoman(num);
+            }
+            else {
+                return "-" + RomanConverter.integerToRoman(Math.abs(num));
             }
 
-            return RomanConverter.integerToRoman(num);
         }
     }
 
@@ -53,9 +54,6 @@
                         case 'X':
                             outPutNum += 10;
                             prevChar = currentChar;
-                            continue;
-                        default:
-                            throw new IllegalArgumentException();
                     }
                 } else {
                     switch (currentChar) {
@@ -66,9 +64,6 @@
                         case 'X':
                             outPutNum += 8;
                             prevChar = currentChar;
-                            continue;
-                        default:
-                            throw new IllegalArgumentException();
 
                     }
                 }
