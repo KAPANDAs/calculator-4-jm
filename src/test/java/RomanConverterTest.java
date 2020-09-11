@@ -28,7 +28,7 @@ public class RomanConverterTest {
     }
 
     @Test
-    public void testCalculations(){
+    public void testCalculations() throws Exception {
         assertEquals("IV", RomanCalculator.calculateRoman(new String[]{"VIII", "/", "II"}));
     }
 }

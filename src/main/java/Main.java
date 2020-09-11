@@ -23,7 +23,7 @@ public class Main {
             } else {
                 throw new IllegalArgumentException();
             }
-        } catch (PatternSyntaxException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

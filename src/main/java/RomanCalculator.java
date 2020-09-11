@@ -13,12 +13,12 @@ public class RomanCalculator {
      * @param args - string with
      * @return String with answer
      */
-    public static String calculateRoman(String[] args) {
+    public static String calculateRoman(String[] args) throws Exception {
         int num = ArabianCalculator.calculate(RomanConverter.romanToInt(args[0]), args[1], RomanConverter.romanToInt(args[2]));
         if (num > 0) {
             return RomanConverter.integerToRoman(num);
         } else {
-            return "-" + RomanConverter.integerToRoman(Math.abs(num));
+            throw new Exception();
         }
 
     }
