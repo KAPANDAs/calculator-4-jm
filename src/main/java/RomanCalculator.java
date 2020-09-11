@@ -18,6 +18,7 @@ public class RomanCalculator {
         if (num > 0) {
             return RomanConverter.integerToRoman(num);
         } else {
+            System.out.println("Отрицательный результат при расчёте римских цифр");
             throw new Exception();
         }
 

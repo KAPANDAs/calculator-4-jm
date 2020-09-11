@@ -17,6 +17,7 @@ public class ArabianCalculator{
             case "*":
                 return firstNum * secondNum;
             default:
+                System.out.println("Неподдерживаемая операция");
                 throw new IllegalArgumentException();
         }
     }

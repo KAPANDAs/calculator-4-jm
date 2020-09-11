@@ -21,10 +21,11 @@ public class Main {
                     System.out.println(RomanCalculator.calculateRoman(input));
                 }
             } else {
+                System.out.println("Неподдерживаемая операция");
                 throw new IllegalArgumentException();
             }
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
         }
     }
 
